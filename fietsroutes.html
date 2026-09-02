@@ -68,6 +68,58 @@
       margin-bottom: 16px;
     }
 
+
+    /* ROUTE OVERZICHT */
+
+    .route-overzicht {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .route-kaart {
+      display: block;
+      background: white;
+      color: #294238;
+      text-decoration: none;
+      padding: 20px;
+      border-radius: 14px;
+      border-left: 6px solid #46745b;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .route-kaart:hover {
+      background: #f7faf6;
+    }
+
+    .route-titel {
+      color: #46745b;
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
+
+    .route-korte-info {
+      color: #60756b;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .route-korte-tekst {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .route-bekijk {
+      color: #46745b;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+
+    /* UITGEBREIDE ROUTE */
+
     .route-info {
       background: #eef3ed;
       border-radius: 14px;
@@ -101,6 +153,9 @@
       color: #46745b;
     }
 
+
+    /* KNOPPEN */
+
     .route-buttons {
       display: grid;
       gap: 12px;
@@ -131,6 +186,20 @@
       background: #5b888a;
     }
 
+
+    /* TERUG NAAR OVERZICHT */
+
+    .back-to-routes {
+      display: block;
+      text-align: center;
+      margin-top: 24px;
+      color: #46745b;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+
     /* FOTO ROUTEKAART */
 
     .route-photo {
@@ -148,26 +217,8 @@
       border-radius: 14px;
     }
 
-    .photo-placeholder {
-      background: #dfeae5;
-      border-radius: 14px;
-      min-height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #60756b;
-      font-size: 17px;
-      margin-top: 20px;
-      padding: 20px;
-    }
 
-    .photo-placeholder strong {
-      display: block;
-      color: #46745b;
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
+    /* MEER ROUTES */
 
     .coming-soon {
       background: #f3f0e6;
@@ -193,6 +244,7 @@
       color: #60756b;
       font-size: 15px;
     }
+
 
     @media (max-width: 600px) {
 
@@ -222,6 +274,10 @@
 
       .route-photo img {
         height: 260px;
+      }
+
+      .route-kaart {
+        padding: 18px;
       }
     }
   </style>
@@ -264,9 +320,53 @@
     </section>
 
 
+    <!-- ROUTE OVERZICHT -->
+
+    <section class="card" id="route-overzicht">
+
+      <h2>🚲 Kies een fietsroute</h2>
+
+      <p>
+        Hieronder vind je onze fietsroutes. Klik op een route
+        voor alle informatie, de routekaart en het GPX-bestand.
+      </p>
+
+      <div class="route-overzicht">
+
+        <a href="#palingroute" class="route-kaart">
+
+          <div class="route-titel">
+            🐟 Palingroute
+          </div>
+
+          <div class="route-korte-info">
+            Rondrit • 41,2 km 
+          </div>
+
+          <div class="route-korte-tekst">
+            Een mooie recreatieve fietstocht richting Workum,
+            met twee pontjes en natuurlijk een palingstop.
+            Ook leuk voor wielrenners.
+          </div>
+
+          <div class="route-bekijk">
+            Bekijk de Palingroute →
+          </div>
+
+        </a>
+
+        <!--
+          LATER KUN JE HIER MEER ROUTES TOEVOEGEN
+        -->
+
+      </div>
+
+    </section>
+
+
     <!-- PALINGROUTE -->
 
-    <section class="card">
+    <section class="card" id="palingroute">
 
       <h2>🐟 Palingroute</h2>
 
@@ -290,7 +390,7 @@
 
         <p>
           <strong>📏 Afstand:</strong>
-          41,3 km
+          41,2 km
         </p>
 
         <p>
@@ -360,11 +460,32 @@
       </div>
 
 
+      <!-- ANDRIES VAN NETTEN -->
+
       <div class="route-buttons">
 
         <a
           class="button"
-          href="Palingroute.gpx"
+          href="eten-en-drinken.html#lokale-producten">
+          🐟 Bekijk lokale producten
+        </a>
+
+        <a
+          class="button secondary"
+          href="tel:+31629467163">
+          📞 Bel Andries van Netten
+        </a>
+
+      </div>
+
+
+      <!-- ROUTE KNOPPEN -->
+
+      <div class="route-buttons">
+
+        <a
+          class="button"
+          href=Palingroute.gpx"
           download>
           📥 GPX downloaden
         </a>
@@ -377,6 +498,11 @@
 
       </div>
 
+
+      <a class="back-to-routes" href="#route-overzicht">
+        ↑ Terug naar alle fietsroutes
+      </a>
+
     </section>
 
 
@@ -387,8 +513,7 @@
       <h2>🗺️ Routekaart Palingroute</h2>
 
       <p>
-        Hieronder kun je straks de kaart van de Palingroute bekijken.
-        Jij kunt zelf de foto van jouw routekaart toevoegen.
+        Hieronder kun je de kaart van de Palingroute bekijken.
       </p>
 
       <div class="route-photo">
@@ -398,6 +523,10 @@
           alt="Routekaart Palingroute">
 
       </div>
+
+      <a class="back-to-routes" href="#palingroute">
+        ↑ Terug naar Palingroute
+      </a>
 
     </section>
 
@@ -420,6 +549,25 @@
         een pontje komt te staan dat niet meer vaart.
       </p>
 
+      <div class="tip">
+
+        <strong>⛴️ Let op:</strong><br>
+
+        De vaartijden kunnen veranderen. Controleer daarom
+        altijd vóór vertrek of beide pontjes varen.
+
+        <br><br>
+
+        <strong>💶 Kosten:</strong>
+        € 1,50 per persoon per overtocht.
+        Betalen kan contant of met een QR-code.
+
+      </div>
+
+      <a class="back-to-routes" href="#palingroute">
+        ↑ Terug naar Palingroute
+      </a>
+
     </section>
 
 
@@ -435,10 +583,7 @@
         ondersteunt.
       </p>
 
-      <p>
-        Je hebt geen Komoot-account nodig om het GPX-bestand vanaf
-        deze website te downloaden.
-      </p>
+  
 
       <div class="tip">
 
@@ -448,6 +593,17 @@
         je telefoon voldoende is opgeladen.
 
       </div>
+
+      <a
+        class="button"
+        href="Palingroute.gpx"
+        download>
+        📥 GPX downloaden
+      </a>
+
+      <a class="back-to-routes" href="#palingroute">
+        ↑ Terug naar Palingroute
+      </a>
 
     </section>
 
