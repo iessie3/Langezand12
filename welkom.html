@@ -82,24 +82,46 @@
       margin-bottom: 0;
     }
 
-    .photo-placeholder {
-      background: #dfeae5;
-      border-radius: 16px;
-      min-height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Kleine foto's */
+
+    .small-photo {
       text-align: center;
-      color: #60756b;
-      font-size: 18px;
-      margin-bottom: 22px;
+      margin: 22px 0 5px;
     }
 
-    .photo-placeholder strong {
+    .small-photo img {
       display: block;
+      width: 100%;
+      max-width: 280px;
+      height: 180px;
+      object-fit: cover;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+
+    /* Vier foto's naast elkaar */
+
+    .environment-photos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .environment-photos img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .photo-label {
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
       color: #46745b;
-      font-size: 21px;
-      margin-bottom: 8px;
+      margin-top: 6px;
     }
 
     .tip-list {
@@ -151,6 +173,31 @@
       margin-top: 35px;
       color: #60756b;
       font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
+
+      .card {
+        padding: 22px;
+      }
+
+      .small-photo img {
+        max-width: 240px;
+        height: 155px;
+      }
+
+      .environment-photos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+      }
+
+      .environment-photos img {
+        height: 70px;
+      }
+
+      .photo-label {
+        font-size: 10px;
+      }
     }
   </style>
 </head>
@@ -205,10 +252,8 @@
 
     <section class="card">
 
-      <div class="photo-placeholder">
-        <div>
-          <img src="Langezand.jpg" alt="Langezand 12" style="width:100%; border-radius:16px; margin-bottom:22px;">
-        </div>
+      <div class="small-photo">
+        <img src="Langezand12.jpg" alt="Langezand 12">
       </div>
 
       <h2>🏠 Ons vakantiehuis</h2>
@@ -245,11 +290,8 @@
         een drankje aan het einde van de dag.
       </p>
 
-      <div class="photo-placeholder">
-        <div>
-          <strong>📷 Foto van het water</strong>
-          Hier kan later een foto van de tuin, steiger of het water komen.
-        </div>
+      <div class="small-photo">
+        <img src="water.jpg" alt="Het water bij Langezand 12">
       </div>
 
     </section>
@@ -298,36 +340,46 @@
     </section>
 
 
-    <!-- FOTO'S -->
+    <!-- SFEER & OMGEVING -->
 
     <section class="card">
 
-      <h2>📸 Een kijkje rondom het huis</h2>
+      <h2>📸 Sfeer & omgeving</h2>
 
       <p>
-        Hier kunnen later nog een paar mooie foto's komen van
-        het huis, de tuin, het water en de omgeving.
+        Rondom Langezand 12 is het heerlijk genieten van water,
+        strand, natuur en het mooie Friese landschap.
       </p>
 
-      <div class="photo-placeholder">
-        <div>
-          <strong>📷 Foto 1</strong>
-          Bijvoorbeeld de tuin
-        </div>
-      </div>
+      <p>
+        Vanuit het huis kun je lekker op de fiets stappen, een
+        wandeling maken of gewoon rustig genieten van het uitzicht.
+        Makkum en de omgeving hebben voor iedereen wel iets moois
+        te bieden. 🌊🌿🚲
+      </p>
 
-      <div class="photo-placeholder">
-        <div>
-          <strong>📷 Foto 2</strong>
-          Bijvoorbeeld het uitzicht over het water
-        </div>
-      </div>
+      <div class="environment-photos">
 
-      <div class="photo-placeholder">
         <div>
-          <strong>📷 Foto 3</strong>
-          Bijvoorbeeld het strand of Makkum
+          <img src="omgeving1.jpg" alt="De omgeving van Langezand 12">
+          <div class="photo-label">🌿 Omgeving</div>
         </div>
+
+        <div>
+          <img src="omgeving2.jpg" alt="Water en natuur">
+          <div class="photo-label">🌊 Water</div>
+        </div>
+
+        <div>
+          <img src="omgeving3.jpg" alt="Fietsen in Friesland">
+          <div class="photo-label">🚲 Fietsen</div>
+        </div>
+
+        <div>
+          <img src="omgeving4.jpg" alt="Strand van Makkum">
+          <div class="photo-label">🏖️ Strand</div>
+        </div>
+
       </div>
 
     </section>
