@@ -83,7 +83,7 @@
       color: #294238;
       text-decoration: none;
       padding: 20px;
-      border-radius: 14px;
+      border-radius: 15px;
       border-left: 6px solid #46745b;
       box-shadow: 0 3px 10px rgba(0,0,0,0.06);
     }
@@ -94,7 +94,7 @@
 
     .route-titel {
       color: #46745b;
-      font-size: 21px;
+      font-size: 22px;
       font-weight: bold;
       margin-bottom: 7px;
     }
@@ -118,7 +118,7 @@
     }
 
 
-    /* UITGEBREIDE ROUTE */
+    /* ROUTE INFORMATIE */
 
     .route-info {
       background: #eef3ed;
@@ -139,6 +139,9 @@
     .route-description strong {
       color: #46745b;
     }
+
+
+    /* TIPS */
 
     .tip {
       background: #eef3ed;
@@ -187,20 +190,34 @@
     }
 
 
-    /* TERUG NAAR OVERZICHT */
+    /* VERTICALE FOTO'S PALINGROUTE */
 
-    .back-to-routes {
+    .route-fotos {
+      margin-top: 30px;
+    }
+
+    .route-fotos p {
+      margin-bottom: 18px;
+    }
+
+    .route-foto-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+      align-items: start;
+    }
+
+    .route-foto-grid img {
       display: block;
-      text-align: center;
-      margin-top: 24px;
-      color: #46745b;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: bold;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 14px;
     }
 
 
-    /* FOTO ROUTEKAART */
+    /* ROUTEKAART */
 
     .route-photo {
       text-align: center;
@@ -218,6 +235,23 @@
     }
 
 
+    /* TERUG NAAR ROUTE OVERZICHT */
+
+    .back-to-routes {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      color: #46745b;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .back-to-routes:hover {
+      text-decoration: underline;
+    }
+
+
     /* MEER ROUTES */
 
     .coming-soon {
@@ -229,6 +263,9 @@
       font-size: 17px;
     }
 
+
+    /* TERUG NAAR HOME */
+
     .back {
       display: inline-block;
       margin-top: 5px;
@@ -238,6 +275,9 @@
       font-weight: bold;
     }
 
+
+    /* FOOTER */
+
     .footer {
       text-align: center;
       margin-top: 35px;
@@ -245,6 +285,8 @@
       font-size: 15px;
     }
 
+
+    /* MOBIEL */
 
     @media (max-width: 600px) {
 
@@ -268,16 +310,27 @@
         font-size: 25px;
       }
 
+      h3 {
+        font-size: 21px;
+      }
+
       p {
         font-size: 17px;
       }
 
-      .route-photo img {
-        height: 260px;
+      /* Ook op mobiel 2 verticale foto's naast elkaar */
+
+      .route-foto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
       }
 
-      .route-kaart {
-        padding: 18px;
+      .route-foto-grid img {
+        height: 280px;
+      }
+
+      .route-photo img {
+        height: 260px;
       }
     }
   </style>
@@ -327,11 +380,13 @@
       <h2>🚲 Kies een fietsroute</h2>
 
       <p>
-        Hieronder vind je onze fietsroutes. Klik op een route
-        voor alle informatie, de routekaart en het GPX-bestand.
+        Klik op een route voor alle informatie, foto's,
+        de routekaart en het GPX-bestand.
       </p>
 
       <div class="route-overzicht">
+
+        <!-- PALINGROUTE -->
 
         <a href="#palingroute" class="route-kaart">
 
@@ -340,11 +395,11 @@
           </div>
 
           <div class="route-korte-info">
-            Rondrit • 41,2 km 
+            Rondrit • [afstand invullen] km • [duur invullen]
           </div>
 
           <div class="route-korte-tekst">
-            Een mooie recreatieve fietstocht richting Workum,
+            Mooie recreatieve fietsroute richting Workum,
             met twee pontjes en natuurlijk een palingstop.
             Ook leuk voor wielrenners.
           </div>
@@ -356,7 +411,7 @@
         </a>
 
         <!--
-          LATER KUN JE HIER MEER ROUTES TOEVOEGEN
+          HIER KUNNEN LATER MEER ROUTES KOMEN.
         -->
 
       </div>
@@ -364,7 +419,7 @@
     </section>
 
 
-    <!-- PALINGROUTE -->
+    <!-- VOLLEDIGE PALINGROUTE -->
 
     <section class="card" id="palingroute">
 
@@ -375,6 +430,9 @@
         gezellige plaatsen én twee leuke overtochten?
         Dan is de Palingroute een mooie tocht om te maken.
       </p>
+
+
+      <!-- ROUTE INFORMATIE -->
 
       <div class="route-info">
 
@@ -390,7 +448,12 @@
 
         <p>
           <strong>📏 Afstand:</strong>
-          41,2 km
+          [afstand invullen] km
+        </p>
+
+        <p>
+          <strong>⏱️ Fietsduur:</strong>
+          [duur invullen]
         </p>
 
         <p>
@@ -400,6 +463,8 @@
 
       </div>
 
+
+      <!-- ROUTE BESCHRIJVING -->
 
       <div class="route-description">
 
@@ -435,6 +500,9 @@
 
         </div>
 
+
+        <!-- ANDRIES VAN NETTEN -->
+
         <p>
           En natuurlijk hoort er bij een route met de naam
           <strong>Palingroute</strong> ook een echte palingstop. 🐟
@@ -444,7 +512,7 @@
           Je kunt paling halen bij
           <strong>Andries van Netten</strong>.
           Meer informatie hierover vind je op de pagina
-          <strong>Eten en drinken → Lokale producten</strong>.
+          <strong>Eten en drinken onder het kopje Lokale producten</strong>.
         </p>
 
         <div class="tip">
@@ -457,44 +525,77 @@
 
         </div>
 
-      </div>
+
+        <!-- ANDRIES KNOPPEN -->
+
+        <div class="route-buttons">
+
+          <a
+            class="button"
+            href="eten-en-drinken.html#lokale-producten">
+            🐟 Bekijk Andries bij lokale producten
+          </a>
+
+          <a
+            class="button secondary"
+            href="tel:+31629467163">
+            📞 Bel Andries van Netten
+          </a>
+
+        </div>
 
 
-      <!-- ANDRIES VAN NETTEN -->
+        <!-- FOTO'S PALINGROUTE -->
 
-      <div class="route-buttons">
+        <div class="route-fotos">
 
-        <a
-          class="button"
-          href="eten-en-drinken.html#lokale-producten">
-          🐟 Bekijk lokale producten
-        </a>
+          <h3>📸 Foto's van de Palingroute</h3>
 
-        <a
-          class="button secondary"
-          href="tel:+31629467163">
-          📞 Bel Andries van Netten
-        </a>
+          <p>
+            Bekijk hieronder foto's van onderweg.
+          </p>
 
-      </div>
+          <div class="route-foto-grid">
+
+            <img
+              src="palingroute1.jpg"
+              alt="Palingroute foto 1">
+
+            <img
+              src="palingroute2.jpg"
+              alt="Palingroute foto 2">
+
+            <img
+              src="palingroute3.jpg"
+              alt="Palingroute foto 3">
+
+            <img
+              src="palingroute4.jpg"
+              alt="Palingroute foto 4">
+
+          </div>
+
+        </div>
 
 
-      <!-- ROUTE KNOPPEN -->
+        <!-- GPX EN ROUTEKAART -->
 
-      <div class="route-buttons">
+        <div class="route-buttons">
 
-        <a
-          class="button"
-          href=Palingroute.gpx"
-          download>
-          📥 GPX downloaden
-        </a>
+          <a
+            class="button"
+            href="Palingroute.gpx"
+            download>
+            📥 GPX downloaden
+          </a>
 
-        <a
-          class="button secondary"
-          href="#routekaart">
-          🗺️ Bekijk de routekaart
-        </a>
+          <a
+            class="button secondary"
+            href="#routekaart">
+            🗺️ Bekijk de routekaart
+          </a>
+
+        </div>
 
       </div>
 
@@ -539,27 +640,68 @@
 
       <p>
         De twee pontjes zijn een leuk onderdeel van de Palingroute.
-        Het geeft de tocht een extra vakantiegevoel en je ziet
-        Friesland weer eens vanaf het water.
+        Even van de fiets, het water over en daarna weer verder.
+        Dat geeft de tocht een extra vakantiegevoel. 🚲🌊
       </p>
 
+
+      <!-- PONTJE IT OERSET -->
+
+      <h3>⛴️ Pontje It Oerset</h3>
+
       <p>
-        Controleer wel altijd vóór vertrek de actuele vaartijden.
-        Zo voorkom je dat je onderweg lang moet wachten of voor
-        een pontje komt te staan dat niet meer vaart.
+        Dit pontje vaart tussen
+        <strong>Gaastmeer en It Heidenskip</strong>.
+        Het is een fiets- en voetveer en brengt je over het water
+        richting It Heidenskip.
       </p>
+
+      <a
+        class="button"
+        href="https://www.waterlandvanfriesland.nl/nl/routes/fietsroutes-friesland/2694992072/pontjeroute-gaastmeer"
+        target="_blank"
+        rel="noopener">
+        ⛴️ Bekijk actuele tijden It Oerset
+      </a>
+
+
+      <!-- PONTJE DROECH OER DE FEART -->
+
+      <h3 style="margin-top: 30px;">
+        ⛴️ Pontje Droech oer de Feart
+      </h3>
+
+      <p>
+        Dit pontje vaart tussen
+        <strong>Gaastmeer en Nijhuizum</strong>.
+        Je wordt hier <em>droech oer de feart</em> –
+        droog over de vaart – naar de overkant gezet.
+      </p>
+
+      <a
+        class="button"
+        href="https://www.friesland.nl/nl/locaties/3985432930/veerpont-droech-oer-de-feart-nijhuizum"
+        target="_blank"
+        rel="noopener">
+        ⛴️ Bekijk actuele tijden Droech oer de Feart
+      </a>
+
 
       <div class="tip">
 
-        <strong>⛴️ Let op:</strong><br>
+        <strong>⚠️ Controleer vóór vertrek!</strong><br>
 
-        De vaartijden kunnen veranderen. Controleer daarom
-        altijd vóór vertrek of beide pontjes varen.
+        Kijk altijd even naar de actuele vaartijden van beide
+        pontjes. De dienstregeling kan per periode verschillen
+        en er kunnen tijdelijke wijzigingen zijn.
 
         <br><br>
 
         <strong>💶 Kosten:</strong>
         € 1,50 per persoon per overtocht.
+
+        <br><br>
+
         Betalen kan contant of met een QR-code.
 
       </div>
@@ -583,7 +725,10 @@
         ondersteunt.
       </p>
 
-  
+      <p>
+        Je hebt geen Komoot-account nodig om het GPX-bestand vanaf
+        deze website te downloaden.
+      </p>
 
       <div class="tip">
 
@@ -627,6 +772,8 @@
 
     </section>
 
+
+    <!-- TERUG NAAR HOME -->
 
     <a class="back" href="index.html">
       ← Terug naar Langezand 12
