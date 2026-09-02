@@ -81,17 +81,30 @@
     }
 
     .route-description {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .route-description strong {
       color: #46745b;
     }
 
+    .tip {
+      background: #eef3ed;
+      border-radius: 14px;
+      padding: 18px;
+      margin: 20px 0;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .tip strong {
+      color: #46745b;
+    }
+
     .route-buttons {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .button {
@@ -118,17 +131,42 @@
       background: #5b888a;
     }
 
-    .tip {
-      background: #eef3ed;
-      border-radius: 14px;
-      padding: 18px;
-      margin-top: 20px;
-      font-size: 17px;
-      line-height: 1.55;
+    /* FOTO ROUTEKAART */
+
+    .route-photo {
+      text-align: center;
+      margin-top: 22px;
     }
 
-    .tip strong {
+    .route-photo img {
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      object-fit: cover;
+      margin: 0 auto;
+      border-radius: 14px;
+    }
+
+    .photo-placeholder {
+      background: #dfeae5;
+      border-radius: 14px;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #60756b;
+      font-size: 17px;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    .photo-placeholder strong {
+      display: block;
       color: #46745b;
+      font-size: 20px;
+      margin-bottom: 8px;
     }
 
     .coming-soon {
@@ -137,6 +175,7 @@
       padding: 20px;
       text-align: center;
       color: #60756b;
+      font-size: 17px;
     }
 
     .back {
@@ -180,6 +219,10 @@
       p {
         font-size: 17px;
       }
+
+      .route-photo img {
+        height: 260px;
+      }
     }
   </style>
 </head>
@@ -201,22 +244,21 @@
       <h2>🚲 Heerlijk fietsen vanaf Langezand 12</h2>
 
       <p>
-        Vanaf Langezand 12 kun je prachtige fietstochten maken door
-        Friesland. Rustige fietspaden, water, weilanden, gezellige
-        dorpjes en mooie uitzichten maken fietsen hier extra leuk.
+        Vanaf Langezand 12 kun je heerlijk op de fiets stappen en
+        de mooie omgeving van Makkum ontdekken.
       </p>
 
       <p>
-        Op deze pagina verzamelen we onze favoriete fietsroutes.
-        Je kunt een route bekijken, de routegegevens lezen en het
-        GPX-bestand downloaden voor gebruik op je telefoon of
-        fietscomputer.
+        Je fietst door het Friese landschap, langs het water,
+        door gezellige dorpjes en over rustige wegen en fietspaden.
+        Sommige routes zijn heerlijk ontspannen, maar ook voor
+        wielrenners zijn er leuke tochten te maken.
       </p>
 
       <p>
-        Neem onderweg vooral de tijd voor een kop koffie, een ijsje,
-        een lunch of een leuke stop. Het hoeft tenslotte geen wedstrijd
-        te zijn. 😊
+        Onderweg zijn er volop mogelijkheden om even te stoppen
+        voor een kop koffie, een lunch, een ijsje of natuurlijk
+        iets lekkers uit de streek.
       </p>
 
     </section>
@@ -229,9 +271,9 @@
       <h2>🐟 Palingroute</h2>
 
       <p>
-        Een mooie fietstocht vanuit Langezand 12 waarbij je Friesland
-        op een ontspannen manier ontdekt. Onderweg kom je langs water,
-        mooie landschappen en gezellige Friese plaatsen.
+        Zin in een mooie fietstocht met onderweg water, Friesland,
+        gezellige plaatsen én twee leuke overtochten?
+        Dan is de Palingroute een mooie tocht om te maken.
       </p>
 
       <div class="route-info">
@@ -248,17 +290,12 @@
 
         <p>
           <strong>📏 Afstand:</strong>
-          [afstand invullen] km
+          41,3 km
         </p>
 
         <p>
-          <strong>⏱️ Fietsduur:</strong>
-          [duur invullen]
-        </p>
-
-        <p>
-          <strong>🚲 Niveau:</strong>
-          Rustige recreatieve fietstocht maar ook leuk 
+          <strong>🚲 Karakter:</strong>
+          Mooie recreatieve fietsroute, maar ook leuk voor wielrenners
         </p>
 
       </div>
@@ -266,35 +303,59 @@
 
       <div class="route-description">
 
-        <h3>🌿 Over de route</h3>
+        <h3>🌿 Een mooie tocht door Friesland</h3>
 
         <p>
-          Deze route is gemaakt om lekker te genieten van het Friese
-          landschap. Onderweg is er genoeg te zien en zijn er mooie
-          plekken om even af te stappen.
+          Deze route leidt je vanuit Langezand 12 door een mooie
+          omgeving richting <strong>Workum</strong>.
+          Onderweg geniet je van het Friese landschap, het water
+          en de rust van het buitengebied.
         </p>
 
         <p>
-          <strong>🐟 Een leuke naam voor een leuke tocht.</strong>
-          De Palingroute brengt je door een omgeving waar water en
-          het Friese buitenleven een belangrijke rol spelen.
+          Een extra leuke belevenis zijn de <strong>twee pontjes</strong>
+          die je onderweg tegenkomt. Even van de fiets, het water over
+          en daarna weer verder. Dat maakt deze route net even anders
+          dan een gewone fietstocht. ⛴️🚲
+        </p>
+
+        <div class="tip">
+
+          <strong>⛴️ Let op de vaartijden van de pontjes!</strong><br>
+
+          Kijk voordat je vertrekt goed naar de vaartijden van beide
+          pontjes. De tijden kunnen verschillen en de pontjes varen
+          niet de hele dag.
+
+          <br><br>
+
+          <strong>💶 Kosten:</strong>
+          € 1,50 per persoon per overtocht.
+          Betalen kan contant of met een QR-code.
+
+        </div>
+
+        <p>
+          En natuurlijk hoort er bij een route met de naam
+          <strong>Palingroute</strong> ook een echte palingstop. 🐟
         </p>
 
         <p>
-          Kijk onderweg rustig om je heen, maak een paar foto's en
-          pak vooral een terrasje als je daar zin in hebt.
+          Je kunt paling halen bij
+          <strong>Andries van Netten</strong>.
+          Meer informatie hierover vind je op de pagina
+          <strong>Eten en drinken → Lokale producten</strong>.
         </p>
 
-      </div>
+        <div class="tip">
 
+          <strong>🐟 Onze tip:</strong><br>
 
-      <div class="tip">
+          Bel Andries van Netten vooraf even op om te vragen of hij
+          vangst heeft. Zo weet je zeker dat er paling beschikbaar is
+          wanneer je langskomt.
 
-        <strong>💡 Tip onderweg</strong><br>
-
-        Neem voor onderweg eventueel iets te eten en drinken mee.
-        En houd ruimte over voor een lekkere stop onderweg. Friesland
-        is tenslotte ook gemaakt om op de fiets van te genieten. 🚲🌿
+        </div>
 
       </div>
 
@@ -311,7 +372,7 @@
         <a
           class="button secondary"
           href="#routekaart">
-          🗺️ Routekaart bekijken
+          🗺️ Bekijk de routekaart
         </a>
 
       </div>
@@ -326,48 +387,65 @@
       <h2>🗺️ Routekaart Palingroute</h2>
 
       <p>
-        Hier komt de kaart van de Palingroute te staan.
-        Je kunt later zelf een afbeelding van jouw routekaart
-        toevoegen.
+        Hieronder kun je straks de kaart van de Palingroute bekijken.
+        Jij kunt zelf de foto van jouw routekaart toevoegen.
       </p>
 
-      <div class="coming-soon">
+      <div class="route-photo">
 
-        📍 <strong>Routekaart</strong><br><br>
-
-        Voeg hier later jouw routekaart toe als
-        <strong>Palingroute.jpg</strong>.
+        <img
+          src="Palingroute.jpg"
+          alt="Routekaart Palingroute">
 
       </div>
 
     </section>
 
 
-    <!-- HOE TE GEBRUIKEN -->
+    <!-- PONTJES -->
 
     <section class="card">
 
-      <h2>📱 Zo gebruik je de route</h2>
+      <h2>⛴️ Onderweg met de pontjes</h2>
 
       <p>
-        Download het GPX-bestand op je telefoon of fietscomputer.
-        Daarna kun je de route openen in een app die GPX-bestanden
+        De twee pontjes zijn een leuk onderdeel van de Palingroute.
+        Het geeft de tocht een extra vakantiegevoel en je ziet
+        Friesland weer eens vanaf het water.
+      </p>
+
+      <p>
+        Controleer wel altijd vóór vertrek de actuele vaartijden.
+        Zo voorkom je dat je onderweg lang moet wachten of voor
+        een pontje komt te staan dat niet meer vaart.
+      </p>
+
+    </section>
+
+
+    <!-- GPX -->
+
+    <section class="card">
+
+      <h2>📱 De route op je telefoon of fietscomputer</h2>
+
+      <p>
+        Download het GPX-bestand van de Palingroute en gebruik dit
+        op je telefoon, fietscomputer of in een app die GPX-bestanden
         ondersteunt.
       </p>
 
       <p>
-        Je hoeft voor het downloaden van onze route geen Komoot-account
-        te hebben. Het GPX-bestand is gewoon rechtstreeks vanaf deze
-        website te downloaden.
+        Je hebt geen Komoot-account nodig om het GPX-bestand vanaf
+        deze website te downloaden.
       </p>
 
       <div class="tip">
 
-        <strong>🚲 Tip</strong><br>
+        <strong>💡 Handige tip</strong><br>
 
-        Zorg dat je telefoon voldoende is opgeladen voordat je
-        vertrekt. Een powerbank kan handig zijn bij langere
-        fietstochten.
+        Download de route alvast voordat je vertrekt en zorg dat
+        je telefoon voldoende is opgeladen.
 
       </div>
 
@@ -381,13 +459,13 @@
       <h2>🚲 Meer fietsroutes</h2>
 
       <p>
-        We gaan deze pagina steeds verder uitbreiden met mooie
-        fietsroutes vanuit Langezand 12.
+        We gaan deze pagina verder uitbreiden met meer mooie routes
+        vanuit Langezand 12.
       </p>
 
       <div class="coming-soon">
 
-        🌿 Nieuwe routes volgen binnenkort!
+        🌿 Meer mooie fietstochten volgen!
 
       </div>
 
